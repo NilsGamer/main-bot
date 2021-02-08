@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 
 bot = commands.Bot(command_prefix='/')
 
@@ -41,4 +42,4 @@ async def kill_error(ctx, error):
         await ctx.send('Ich kann ihn nicht finden sry.')
 
 
-bot.run('NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.XX-7O8DSLPNCo3WprIexJ6Pe77M')
+bot.run(os.environ["token"])

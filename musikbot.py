@@ -1,5 +1,6 @@
 import sys
 import traceback
+import os
 
 from discord.ext import commands
 
@@ -27,4 +28,4 @@ if __name__ == '__main__':
             print(f'Failed to load extension {extension}.', file=sys.stderr)
             traceback.print_exc()
 
-client.run('NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.XX-7O8DSLPNCo3WprIexJ6Pe77M')
+bot.run(os.environ["token"])

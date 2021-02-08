@@ -1,5 +1,7 @@
 import asyncio
 
+import os
+
 import discord
 from discord import Member
 
@@ -92,4 +94,4 @@ async def on_member_join(member):
             print('Es konnte keine Willkommensnachricht an {0} gesendet werden.'.format(member.name))
 
 
-client.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.XX-7O8DSLPNCo3WprIexJ6Pe77M")
+bot.run(os.environ["token"])

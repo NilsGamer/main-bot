@@ -101,5 +101,4 @@ def get_globalChat_id(guild_id):
 
 ###########################################################
 
-bot.run('NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.XX-7O8DSLPNCo3WprIexJ6Pe77M')
-
+bot.run(os.environ["token"])
