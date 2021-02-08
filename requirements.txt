@@ -1,4 +1,3 @@
 asyncio
 PyNaCl
 youtube_dl
-os
