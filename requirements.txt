@@ -1,4 +1,3 @@
-json
 discord
 os
 sys
@@ -8,3 +7,4 @@ youtube_dl
 PyNacCl
 ffmpeg
 ffprobe
+json
