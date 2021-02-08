@@ -28,4 +28,4 @@ if __name__ == '__main__':
             print(f'Failed to load extension {extension}.', file=sys.stderr)
             traceback.print_exc()
 
-bot.run(os.environ["token"])
+bot.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.UKZqbVmAAEBz-IeCHV44m2NVnEY")
