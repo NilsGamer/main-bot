@@ -1,5 +1,4 @@
 asyncio
-traceback
 PyNaCl
 youtube_dl
 os
