@@ -1,0 +1,7 @@
+json
+discord
+os
+sys
+traceback
+asyncio
+youtube_dl
