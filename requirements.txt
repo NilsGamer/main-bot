@@ -5,3 +5,6 @@ sys
 traceback
 asyncio
 youtube_dl
+PyNacCl
+ffmpeg
+ffprobe
