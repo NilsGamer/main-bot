@@ -4,5 +4,3 @@ traceback
 PyNaCl
 youtube_dl
 os
-discord
-json
