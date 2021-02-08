@@ -1,3 +1,4 @@
 asyncio
 PyNaCl
 youtube_dl
+discord
