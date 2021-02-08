@@ -1,0 +1,5 @@
+asyncio
+sys
+traceback
+PyNaCl
+youtube_dl
