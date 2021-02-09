@@ -4,7 +4,7 @@ import discord
 from discord import Message, Guild, TextChannel
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='/')
+client = commands.Bot(command_prefix='/')
 
 if os.path.isfile("servers.json"):
     with open('servers.json', encoding='utf-8') as f:
@@ -101,4 +101,4 @@ def get_globalChat_id(guild_id):
 
 ###########################################################
 
-bot.run("token")
+client.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.WnbyL2mpM5YpJOu66bNZ-eFD4UE")

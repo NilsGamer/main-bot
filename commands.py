@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-bot = commands.Bot(command_prefix='/')
+client = commands.Bot(command_prefix='/')
 
 
 def caps_pls(text):
@@ -42,4 +42,4 @@ async def kill_error(ctx, error):
         await ctx.send('Ich kann ihn nicht finden sry.')
 
 
-bot.run("token")
+client.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.WnbyL2mpM5YpJOu66bNZ-eFD4UE")

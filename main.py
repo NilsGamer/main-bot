@@ -94,4 +94,4 @@ async def on_member_join(member):
             print('Es konnte keine Willkommensnachricht an {0} gesendet werden.'.format(member.name))
 
 
-bot.run("token")
+client.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.WnbyL2mpM5YpJOu66bNZ-eFD4UE")
