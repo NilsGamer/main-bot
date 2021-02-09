@@ -42,4 +42,4 @@ async def kill_error(ctx, error):
         await ctx.send('Ich kann ihn nicht finden sry.')
 
 
-client.run("NzAyMTQwNzkyODQ3ODU5NzEz.Xp7tkg.WnbyL2mpM5YpJOu66bNZ-eFD4UE")
+client.run(os.environ["token"])
