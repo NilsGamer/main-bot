@@ -14,7 +14,7 @@ async def on_ready():
     client.loop.create_task(status_task())
 
 @client.event
-async ef on_member_join(member):
+async def on_member_join(member):
     channel = discord.utils.get(member.guild.channels, name="wilkommen")
     await channel.send(f"Wilkommen [member.mention]")
     role = discord.utils.get(member.guild.roles, name="member")
