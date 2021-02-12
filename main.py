@@ -7,11 +7,17 @@ from discord import Member
 
 client = discord.Client()
 
-
 @client.event
 async def on_ready():
     print('Login User: {}'.format(client.user.name))
     client.loop.create_task(status_task())
+
+@client.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="wilkommen")
+    await channel.send(f"**Wilkommen** {member.mention} \nUser: {len(list(member.guild.members))")
+    role = discord.utils.get(member.guild.roles, name="Member")
+    await member.add_roles(role)
 
 async def status_task():
     while True:
@@ -24,13 +30,6 @@ async def status_task():
 
 def is_not_pinned(mess):
     return not mess.pinned
-
-@client.event
-async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="wilkommen")
-    await channel.send(f"Wilkommen [member.mention]")
-    role = discord.utils.get(member.guild.roles, name="Member")
-    await member.add_roles(role)
 
 @client.event
 async def on_message(message):
