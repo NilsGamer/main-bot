@@ -15,7 +15,7 @@ async def on_ready():
 
 @client.event
 async ef on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="Wilkommen")
+    channel = discord.utils.get(member.guild.channels, name="wilkommen")
     await channel.send(f"Wilkommen [member.mention]")
     role = discord.utils.get(member.guild.roles, name="member")
     await member.add_roles(role)
