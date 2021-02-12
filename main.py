@@ -13,6 +13,12 @@ async def on_ready():
     print('Login User: {}'.format(client.user.name))
     client.loop.create_task(status_task())
 
+@client.event
+async ef on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="Wilkommen")
+    await channel.send(f"Wilkommen [member.mention]")
+    role = discord.utils.get(member.guild.roles, name="member")
+    await member.add_roles(role)
 
 async def status_task():
     while True:
@@ -77,21 +83,5 @@ async def on_message(message):
     if message.content.startswith("/creator"):
         await message.channel.send("**Der Bot wurde von NilsGamer erstellt**\r\n"
                                    "Weitere Informationen: https://linktr.ee/nilsgamer")
-
-
-
-@client.event
-async def on_member_join(member):
-    if not member.bot:
-        embed = discord.Embed(title='Willkommen auf Melion {} <a:tut_herz:662606955520458754>'.format(member.name),
-                              description='Wir heißen dich hier auf dem Server herzlich Willkommen',
-                              color=0x22a7f0)
-        try:
-            if not member.dm_channel:
-                await member.create_dm()
-            await member.dm_channel.send(embed=embed)
-        except discord.errors.Forbidden:
-            print('Es konnte keine Willkommensnachricht an {0} gesendet werden.'.format(member.name))
-
 
 client.run(os.environ["token"])
