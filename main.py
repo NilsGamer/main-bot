@@ -13,13 +13,6 @@ async def on_ready():
     print('Login User: {}'.format(client.user.name))
     client.loop.create_task(status_task())
 
-@client.event
-async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="wilkommen")
-    await channel.send(f"Wilkommen [member.mention]")
-    role = discord.utils.get(member.guild.roles, name="member")
-    await member.add_roles(role)
-
 async def status_task():
     while True:
         await client.change_presence(activity=discord.Game('mache /? um die Hilfeliste anzuzeigen'), status=discord.Status.online)
@@ -83,5 +76,12 @@ async def on_message(message):
     if message.content.startswith("/creator"):
         await message.channel.send("**Der Bot wurde von NilsGamer erstellt**\r\n"
                                    "Weitere Informationen: https://linktr.ee/nilsgamer")
+
+@client.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="wilkommen")
+    await channel.send(f"Wilkommen [member.mention]")
+    role = discord.utils.get(member.guild.roles, name="member")
+    await member.add_roles(role)
 
 client.run(os.environ["token"])
