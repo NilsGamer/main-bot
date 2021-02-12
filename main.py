@@ -81,6 +81,6 @@ async def on_member_join(member):
     channel = discord.utils.get(member.guild.channels, name="wilkommen")
     await channel.send(f"Wilkommen {member.mention}")
     role = discord.utils.get(member.guild.roles, name="Member")
-    await member.add_roles{role}
+    await member.add_roles(role)
 
 client.run(os.environ["token"])
