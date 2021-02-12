@@ -26,6 +26,13 @@ def is_not_pinned(mess):
     return not mess.pinned
 
 @client.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="wilkommen")
+    await channel.send(f"Wilkommen [member.mention]")
+    role = discord.utils.get(member.guild.roles, name="Member")
+    await member.add_roles(role)
+
+@client.event
 async def on_message(message):
     if message.author.bot:
         return
@@ -76,11 +83,5 @@ async def on_message(message):
     if message.content.startswith("/creator"):
         await message.channel.send("**Der Bot wurde von NilsGamer erstellt**\r\n"
                                    "Weitere Informationen: https://linktr.ee/nilsgamer")
-@client.event
-async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="wilkommen")
-    await channel.send(f"Wilkommen [member.mention]")
-    role = discord.utils.get(member.guild.roles, name="Member")
-    await member.add_roles(role)
 
 client.run(os.environ["token"])
